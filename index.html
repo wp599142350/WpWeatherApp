@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 移动端布局所加的视口 -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<title>天气APP</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery3.2.1.min.js"></script>
+	<script src="js/rem.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+    <!-- 当前天气情况开始 -->
+	<div class="first">
+		<div class="pos"></div>
+		<div class="air">
+			<h4>空气</h4>
+			<h5></h5>
+		</div>
+		<div class="title1"></div>
+		<div class="title2"></div>
+		<div class="title3">
+		<!-- 最常用的文字标签 默认顺序从左往右 -->
+			<span class="wind_der"></span>
+			<span class="wind_level"></span>
+		</div>
+		<div class="title4">你若安好，便是晴天~</div>
+	</div>
+	<!-- 当前天气情况结束 -->
+
+	<!-- 今天和明天天气情况开始 -->
+	<div class="second">
+	    <div class="today">
+	    	<div class="top">
+	    		<div class="todayText">今天</div>
+	    		<div class="tem">
+	    			<span class="heigher"></span>
+	    			<span class="lower"></span>
+	    		</div>
+	    	</div>
+	    	<div class="bottom">
+	    		<div class="con"></div>
+	    		<div class="conPic tomorrow_icon"></div>
+	    	</div>
+	    </div>
+	    <div class="tomorrow">
+	    	<div class="top">
+	    		<div class="tomorrowText">明天</div>
+	    		<div class="tem">
+	    			<span class="heigher heigher0"></span>
+	    			<span class="lower lower0"></span>
+	    		</div>
+	    	</div>
+	    	<div class="bottom">
+	    		<div class="con con0"></div>
+	    		<div class="conPic"></div>
+	    </div>
+	</div>
+	</div>
+	<!-- 今天和明天天气情况结束 -->
+
+	<!-- 24小时天气预报开始 -->
+	<div class="third">
+		<div class="wrap">
+			<!-- <div class="box1">
+				<div class="time">
+					<span>12</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">1°</div>
+			</div>
+			<div class="box2">
+				<div class="time">
+					<span>13</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">1°</div>
+			</div>
+			<div class="box3">
+				<div class="time">
+					<span>14</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">2°</div>
+			</div>
+			<div class="box4">
+				<div class="time">
+					<span>15</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">1°</div>
+			</div>
+			<div class="box5">
+				<div class="time">
+					<span>16</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">0°</div>
+			</div>
+			<div class="box6">
+				<div class="time">
+					<span>17</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">-1°</div>
+			</div>
+			<div class="box7">
+				<div class="time">
+					<span>18</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div> -->
+				<!-- <div class="timeTem">-1°</div>
+			</div>
+			<div class="box8">
+				<div class="time">
+					<span>19</span>
+					<span>:</span>
+					<span>00</span>
+				</div>
+				<div class="icon"></div>
+				<div class="timeTem">-2°</div>
+			</div> -->
+		</div>
+	</div>
+	<!-- 24小时天气预报结束 -->
+
+	<!-- 七天天气预报开始 -->
+	<div class="fourth">
+		<!-- <div class="box">
+			<div class="date">
+				<span>01</span>
+				<span>/</span>
+				<span>15</span>
+			</div>
+			<div class="con1">多云</div>
+			<div class="conPic1"></div>
+			<div class="tem1">3°</div>
+			<div class="tem2">-12°</div>
+			<div class="conPic2"></div>
+			<div class="con2">多云</div>
+			<div class="wind">西北风</div>
+			<div class="size">3级</div>
+		</div>
+		<div class="box">
+			<div class="date">
+				<span>01</span>
+				<span>/</span>
+				<span>16</span>
+			</div>
+			<div class="con1">晴</div>
+			<div class="conPic1"></div>
+			<div class="tem1">2°</div>
+			<div class="tem2">-11°</div>
+			<div class="conPic2"></div>
+			<div class="con2">多云</div>
+			<div class="wind">西南风</div>
+			<div class="size">3级</div>
+		</div>
+		<div class="box">
+			<div class="date">
+				<span>01</span>
+				<span>/</span>
+				<span>17</span>
+			</div>
+			<div class="con1">晴</div>
+			<div class="conPic1"></div>
+			<div class="tem1">3°</div>
+			<div class="tem2">-13°</div>
+			<div class="conPic2"></div>
+			<div class="con2">晴</div>
+			<div class="wind">西北风</div>
+			<div class="size">4级</div>
+		</div>
+		<div class="box">
+			<div class="date">
+				<span>01</span>
+				<span>/</span>
+				<span>18</span>
+			</div>
+			<div class="con1">多云</div>
+			<div class="conPic1"></div>
+			<div class="tem1">2°</div>
+			<div class="tem2">-12°</div>
+			<div class="conPic2"></div>
+			<div class="con2">晴</div>
+			<div class="wind">西风</div>
+			<div class="size">3级</div>
+		</div>
+		<div class="box">
+			<div class="date">
+				<span>01</span>
+				<span>/</span>
+				<span>19</span>
+			</div>
+			<div class="con1">晴</div>
+			<div class="conPic1"></div>
+			<div class="tem1">3°</div>
+			<div class="tem2">-14°</div>
+			<div class="conPic2"></div>
+			<div class="con2">晴</div>
+			<div class="wind">西风</div>
+			<div class="size">3级</div>
+		</div>
+		<div class="box">
+			<div class="date">
+				<span>01</span>
+				<span>/</span>
+				<span>20</span>
+			</div>
+			<div class="con1">晴</div>
+			<div class="conPic1"></div>
+			<div class="tem1">3°</div>
+			<div class="tem2">-12°</div>
+			<div class="conPic2"></div>
+			<div class="con2">多云</div>
+			<div class="wind">西风</div>
+			<div class="size">3级</div>
+		</div> -->
+	</div>
+	<!-- 七天天气预报开始 -->
+
+	<!-- 注意情况开始 -->
+	<div class="fifth">
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">不带伞</div>
+			<div class="thing">雨伞</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">冷</div>
+			<div class="thing">穿衣</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">较弱</div>
+			<div class="thing">防晒</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">较易发</div>
+			<div class="thing">感冒</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">较不宜</div>
+			<div class="thing">运动</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">较适宜</div>
+			<div class="thing">洗车</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">不宜</div>
+			<div class="thing">钓鱼</div>
+		</div>
+		<div class="box">
+			<div class="pic"></div>
+			<div class="notice">良好</div>
+			<div class="thing">交通</div>
+		</div>
+	</div>
+	<!-- 注意情况结束 -->
+
+
+	<!-- 数据来源开始 -->
+	<div class="sixth">数据来源于中国天气网</div>
+	<!-- 数据来源开始 -->
+
+	<!-- 城市搜索开始 -->
+	<div class="city">
+		<div class="search">
+			<input type="text" class="searchBox" placeholder="请输入要搜索的城市名称">
+			<div class="button">取消</div>
+		</div>
+		<div class="citys city1">
+			<div class="title">热门城市</div>
+			<div class="con">
+                <div class="box">北京</div>
+			    <div class="box">上海</div>
+				<div class="box">深圳</div>
+				<div class="box">天津</div>
+				<div class="box">西安</div>
+				<div class="box">浙江</div>
+				<div class="box">永济</div>
+				<div class="box">澳门</div>
+				<div class="box">侯马</div>
+
+			</div>
+		</div>
+			<!-- <div class="citys">
+			<div class="title">广东省</div>
+			<div class="con">
+				<div class="box">广州</div>
+				<div class="box">深圳</div>
+				<div class="box">珠海</div>
+				<div class="box">汕头</div>
+				<div class="box">佛山</div>
+				<div class="box">惠州</div>
+				<div class="box">东莞</div>
+				<div class="box">中山</div>
+				<div class="box">潮州</div>
+				<div class="box">揭阳</div>
+			</div>
+            </div>
+			<div class="citys">
+			<div class="title">山东省</div>
+			<div class="con">
+                <div class="box">济南</div>
+			    <div class="box">青岛</div>
+				<div class="box">枣庄</div>
+				<div class="box">烟台</div>
+				<div class="box">潍坊</div>
+				<div class="box">济宁</div>
+				<div class="box">威海</div>
+				<div class="box">日照</div>
+				<div class="box">聊城</div>
+				<div class="box">临沂</div>
+				<div class="box">菏泽</div>
+			</div>
+			</div>
+			<div class="citys">
+			<div class="title">河北省</div>
+			<div class="con">
+                <div class="box">石家庄</div>
+			    <div class="box">唐山</div>
+				<div class="box">秦皇岛</div>
+				<div class="box">邯郸</div>
+				<div class="box">武安</div>
+				<div class="box">邢台</div>
+				<div class="box">南宫</div>
+				<div class="box">保定</div>
+				<div class="box">定州</div>
+				<div class="box">张家口</div>
+				<div class="box">承德</div>
+			</div>
+			</div>
+			<div class="citys">
+			<div class="title">河南省</div>
+			<div class="con">
+                <div class="box">郑州</div>
+			    <div class="box">开封</div>
+				<div class="box">洛阳</div>
+				<div class="box">安阳</div>
+				<div class="box">新乡</div>
+				<div class="box">焦作</div>
+				<div class="box">许昌</div>
+				<div class="box">三门峡</div>
+				<div class="box">商丘</div>
+				<div class="box">周口</div>
+				<div class="box">南阳</div>
+				<div class="box">济源</div>
+			</div>
+			</div>
+			<div class="citys">
+			<div class="title">陕西省</div>
+			<div class="con">
+                <div class="box">西安</div>
+			    <div class="box">宝鸡</div>
+				<div class="box">咸阳</div>
+				<div class="box">铜川</div>
+				<div class="box">渭南</div>
+				<div class="box">延安</div>
+				<div class="box">榆林</div>
+				<div class="box">汉中</div>
+				<div class="box">商洛</div>
+				<div class="box">杨凌</div>
+			</div>
+			</div>	 -->
+		</div>
+	<!-- 城市搜索结束 -->
+</body>
+</html>
